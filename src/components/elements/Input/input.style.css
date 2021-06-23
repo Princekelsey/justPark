@@ -21,12 +21,12 @@ input:focus {
   caret-color: var(--color-primary);
 }
 
-.input-with-icon input {
-  padding-left: 60px;
-}
-
 .input-with-icon {
   position: relative;
+}
+
+.input-with-icon input {
+  padding-left: 60px;
 }
 
 .input-with-icon i {

@@ -4,14 +4,6 @@ import "./input.style.css";
 
 interface TextInputProps extends React.ComponentPropsWithRef<"input"> {
   /**
-   * Defines the color of the input
-   */
-  valid?: boolean;
-  /**
-   * Defines if the input is disabled
-   */
-  disabled?: boolean;
-  /**
    * Defines the type of the input
    */
   type?: string;
@@ -30,8 +22,6 @@ interface TextInputProps extends React.ComponentPropsWithRef<"input"> {
 }
 
 const TextInput: React.FC<TextInputProps> = ({
-  valid,
-  disabled,
   type = "text",
   icon,
   id,

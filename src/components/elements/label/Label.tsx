@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 import "./label.style.css";
 
 interface LabelProps {
@@ -7,20 +8,20 @@ interface LabelProps {
    */
   id?: string;
   /**
+   * Defines any other className
+   */
+  className?: string;
+  /**
    * Defines any other props
    */
   [x: string]: any;
 }
 
-const Label: React.FC<LabelProps> = ({
-  labelHidden,
-  id,
-  className,
-  children,
-  ...props
-}) => {
+const Label: React.FC<LabelProps> = ({ id, className, children, ...props }) => {
+  const classes = classNames("label", className);
+
   return (
-    <label {...props} className="label" htmlFor={id}>
+    <label {...props} className={classes} htmlFor={id}>
       {children}
     </label>
   );

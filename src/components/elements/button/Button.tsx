@@ -22,8 +22,8 @@ const Button: React.FC<ButtonProps> = ({
   color = "primary",
   type = "button",
   block,
-  children,
   className,
+  children,
   ...props
 }) => {
   const classes = classNames(
@@ -34,7 +34,7 @@ const Button: React.FC<ButtonProps> = ({
   );
 
   return (
-    <button className={classes} {...props}>
+    <button className={classes} {...props} type={type}>
       {children}
     </button>
   );
